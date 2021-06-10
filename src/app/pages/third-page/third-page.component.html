@@ -1,0 +1,15 @@
+<div class="content" role="main">
+  <input type="text" required="required" [(ngModel)]="textValue" (change)="onChangeText($event)"/>
+
+  <div class="mt-5">
+    <p>{{ textValue }}</p>
+  </div>
+
+  <div class="mt-5">
+    <small>Press enter to save text to histories</small>
+    <p>Histories:</p>
+    <div *ngFor="let text of textHistories">
+      <p>{{ text }}</p>
+    </div>
+  </div>
+</div>
